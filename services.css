@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #2d3748;
+    line-height: 1.5;
+}
+
+/* ----------------------------------
+   Sticky Navigation Header Area
+------------------------------------- */
+.site-header {
+    background-color: #032232;
+    color: #ffffff;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-content h1 {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+/* No-JS Native Search Bar Box */
+.search-box {
+    width: 100%;
+    max-width: 320px;
+}
+
+.search-field {
+    width: 100%;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.search-field:focus {
+    border-color: #328cc1;
+}
+
+.search-tip {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    color: #664d03;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-section h2 {
+    color: #0b3c5d;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.hero-section p {
+    color: #718096;
+    font-size: 15px;
+}
+
+/* ----------------------------------
+   Responsive CSS Grid System
+------------------------------------- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* ----------------------------------
+   Individual Organ Information Cards
+------------------------------------- */
+.organ-card {
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #328cc1;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 8px;
+}
+
+.card-header h3 {
+    font-size: 18px;
+    color: #0b3c5d;
+}
+
+.price-tag {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.description {
+    font-size: 13px;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+/* Inside Laboratory Component Lists */
+.test-breakdown {
+    list-style: none;
+}
+
+.test-breakdown li {
+    font-size: 13px;
+    padding: 6px 0;
+    border-bottom: 1px dashed #e2e8f0;
+    color: #2d3748;
+}
+
+.test-breakdown li:last-child {
+    border-bottom: none;
+}
+
+.test-breakdown strong {
+    color: #328cc1;
+}
+
+/* ----------------------------------
+   Footer Layout Settings
+------------------------------------- */
+.site-footer {
+    background-color: #1d2731;
+    color: #a0aec0;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 12px;
+}

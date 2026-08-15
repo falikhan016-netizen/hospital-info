@@ -1,0 +1,488 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f0f4f8;
+}
+
+
+/* Navbar Layout */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    color: white;
+    position: relative;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-links :hover{
+    text-decoration: underline;
+}
+
+/* Completely hide the checkbox from view */
+.menu-checkbox {
+    display: none;
+}
+
+/* Hide the 3-line button on desktop */
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Mobile Responsive Styles (Screens under 768px wide) */
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: flex; /* Show the 3 lines icon */
+    }
+
+    .nav-links {
+        display: none; /* Hide the menu links by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 20px 0;
+        z-index: 10;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* THE CSS HACK: When the checkbox is checked, show the menu links */
+    .menu-checkbox:checked + .menu-btn + .nav-links {
+        display: flex;
+    }
+}
+.info{
+    background-color: #444;
+    width: 250px;
+    height: 360px;          /* Changed from 400px to auto so it expands with text */
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;    /* Centers items horizontally inside the box */
+    padding: 20px;          /* Adds breathing room inside the box edges */
+    border-radius: 40px;
+    margin-left: 130px;
+    margin-top: 10px;
+}
+.para {
+    color: white;          /* Makes the text visible on #444 background */
+    text-align: center;    /* Centers the text lines */
+    font-size: 16px;       /* Sets a clean, readable text size */
+    margin-top: 15px;      /* Adds space between the icon and text */
+    line-height: 1.4;      /* Improves readability between lines */
+}
+.doc{
+    display: flex;
+    align-self: first baseline;
+    justify-self: center;
+    width: 150px;
+    height: 120px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-right: 140px;
+    border-radius: 50px;
+} 
+.info :hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+.services{
+    background-color: #444;
+    color: white;
+    width: 250px;
+    height: auto;          /* Changed from 400px to auto so it expands with text */
+    display: flex;
+   flex-direction: column; /* Stacks items vertically */
+    align-items: center;
+    justify-self:center;    /* Centers items horizontally inside the box */
+    padding: 20px;          /* Adds breathing room inside the box edges */
+    border-radius: 37px;
+    position: relative;
+    top: -360px;
+    left: -25px;
+    
+}
+.services :hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+    para2{
+        text-align: center;    /* Centers the text lines */
+        font-size: 16px;       /* Sets a clean, readable text size */
+        margin-top: 15px;      /* Adds space between the icon and text */
+        line-height: 1.4;      /* Improves readability between lines */
+    }
+
+.doc2{
+    display: flex;
+    align-self: first baseline;
+    justify-self: center;
+    width: 190px;
+    height: 150px;
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-right: 120px;
+    border-radius: 50px;
+
+}
+.dio{
+     background-color: #444;
+    color: white;
+    width: 250px;
+    height: 360px;          /* Changed from 400px to auto so it expands with text */
+    display: flex;
+   flex-direction: column; /* Stacks items vertically */
+    align-items: end;
+    justify-self:end;    /* Centers items horizontally inside the box */
+    padding: 20px;          /* Adds breathing room inside the box edges */
+    border-radius: 37px;
+    position: relative;
+    top: -730px;
+    left: -190px;
+}
+.dio :hover{ 
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.tic{
+    display: flex;
+    align-self: first baseline;
+    justify-self: center;
+    width: 120px;
+    height: 130px;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-right: 50px;
+    
+
+}
+.in{
+    text-align: center;    /* Centers the text lines */
+        font-size: 16px;       /* Sets a clean, readable text size */
+        margin-top: 15px;      /* Adds space between the icon and text */
+        line-height: 1.4;      /* Improves readability between lines */
+    }
+
+.img{
+     border-radius: 15%;    /* Makes it a perfect circle */
+    object-fit: cover;     /* Prevents the doctor icon from stretching */
+    
+    /* Remove or reduce these so the icon centers nicely inside the card */
+    margin-left: 0px;      
+    margin-right: 0px;     
+
+}
+
+.owaisilo{
+    display: flex;
+    align-self: start;
+    justify-self: start;
+   margin-left: 30px;
+}
+
+.fon{
+    height: 280px;
+    background-color: #444;
+    color: white;
+    position: relative;
+    top: -630px;
+    left: 30px;
+    border-radius: 50px;
+}
+.on{
+    border-radius: 50px;
+    width: 220px;
+    height: 210px;
+    display: flex;
+    align-self: start;
+    justify-self: left;
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+.ip{
+    display: flex;
+    justify-self: end;
+    position: relative;
+    left: -100px;
+    bottom: 130px;
+}
+
+.sul{
+    background-color: darkkhaki;
+    border-radius: 50px;
+    color: white;
+    position: relative;
+    left: 30px;
+    top: -525px;
+}
+.tan{
+    border-radius: 50px;
+    width: 220px;
+    height: 210px;
+    display: flex;
+    align-self: start;
+    justify-self: left;
+    position: relative;
+    top: 30px;
+    left: 20px;
+
+}
+.ok{
+    display: flex;
+    justify-self: end;
+    position: relative;
+    left:-50px;
+    bottom: 130px;
+
+}
+
+.son1{
+    background-color: darkolivegreen;
+    color: white;
+    width: 500px;
+    height: 470px;
+    border-radius: 50px;
+    position: relative;
+    top: -480px;
+    left: 130px;
+
+}
+.ab{
+    width: 220px;
+    height: 210;
+    border-radius: 40px;
+    position: relative;
+    left: 130px;
+    top: 50px;
+}
+
+.ut{
+    position: relative;
+    top: 70px;
+    left: 15px;
+
+
+
+}
+
+.son2{
+    background-color: darkolivegreen;
+    color: white;
+    width: 500px;
+    height: 470px;
+    border-radius: 50px;
+    position: relative;
+    top: -950px;
+    left: 870px;
+    padding-right: 10px;
+
+}
+.ak{
+    width: 220px;
+    height: 210;
+    border-radius: 40px;
+    position: relative;
+    left: 130px;
+    top: 50px;
+}
+
+.ow{
+position: relative;
+    top: 70px;
+    left: 15px;
+
+}
+
+.about{
+    background-color: burlywood;
+    color: black;
+    border-radius: 30px;
+    width: 1500px;
+    height: 180px;
+    position: relative;
+    left: 20px;
+    top: -900px;
+}
+
+.hos{
+    position: relative;
+    left: 10px;
+    top: 20px;
+
+
+}
+.slider {
+    width: 600px;
+    height: 350px;
+    overflow: hidden;
+    margin: 50px auto;
+    position: relative;
+    top: -830px;
+    border-radius: 40px;
+}
+
+.slides {
+    display: flex;
+    width: 3000px;
+    animation: slide 10s infinite;
+}
+
+.slides img {
+    width: 600px;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Slide animation */
+@keyframes slide {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-600px);
+    }
+
+    40% {
+        transform: translateX(-600px);
+    }
+
+    45% {
+        transform: translateX(-1200px);
+    }
+
+    60% {
+        transform: translateX(-1200px);
+    }
+
+    65% {
+        transform: translateX(-1800px);
+    }
+
+    80% {
+        transform: translateX(-1800px);
+    }
+
+    85% {
+        transform: translateX(-2400px);
+    }
+
+    100% {
+        transform: translateX(-2400px);
+    }
+}
+
+.r1{
+    background-color: lightgrey;
+    width: 400px;
+    height: 630px;
+    border-radius: 30px;
+    position: relative;
+    margin-top: -1300px;
+    left:20px ;
+    padding-top: 10px;
+}
+    
+.r2{
+    background-color: lightgrey;
+    width: 400px;
+    height: 630px;
+    border-radius: 30px;
+    position: relative;
+    margin-top:-630px;
+    left: 1100px;
+    padding-top: 10px;
+    
+}
+
+footer {
+    background-color: #00050a;
+    color: white;
+
+    display: flex;
+    justify-content: space-around;
+
+    padding: 40px 20px;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.footer-section p {
+    margin: 8px 0;
+}
+
+.footer-section a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.footer-section a:hover {
+    color: #7ee8fa;
+    text-decoration: underline;
+}

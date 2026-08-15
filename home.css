@@ -1,0 +1,33 @@
+ *{
+    margin: 0;
+    background-image: url("homepage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+form {
+    color: white;
+    width: 300px;
+    margin: 100px auto;
+    padding: 25px;
+    text-align: center;
+}
+
+label {
+    display:block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 15px;
+    padding: 8px 20px;
+}
