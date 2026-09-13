@@ -3,306 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>doctor</title>
+    <title>Our Specialist Doctors – Owaisi Hospital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="doctor.css">
 </head>
 <body>
-    <link rel="stylesheet" href="doctor.css">
-    
-<h1>Our Specialist Doctors</h1>
 
-<!-- Radio buttons for sliding -->
-<input type="radio" name="slide" id="page1" checked>
-<input type="radio" name="slide" id="page2">
-
-<div class="slider">
-
-    <!-- PAGE 1 : 6 DOCTORS -->
-    <div class="doctor-page">
-
-        <!-- Doctor 1 -->
-        <div class="card">
-            <input type="checkbox" id="doctor1">
-            <div class="card-inner">
-
-                <div class="card-front">
-                    <img src="doc1.jpg">
-                    <h2>Dr. John Smith</h2>
-                    <p>Experience: 12 Years</p>
-                    <p>Cardiologist</p>
-                </div>
-
-                <div class="card-back">
-                    <h2>Dr. John Smith</h2>
-                    <p>
-                        Dr. John is an experienced cardiologist.
-                        He provides expert heart care and treatment
-                        with modern medical technology.
-                    </p>
-                </div>
-
-            </div>
-            <label for="doctor1" class="flip">Click to Flip</label>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://ik.imagekit.io/ii1duviwf/assets/images3.jpg?updatedAt=1786777859644" alt="Owaisi Hospital Logo" class="owaisilo">
+            <p class="navlogo"><i>Owaisi Hospital</i></p>
         </div>
 
-        <!-- Doctor 2 -->
-        <div class="card">
-            <input type="checkbox" id="doctor2">
-            <div class="card-inner">
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-                <div class="card-front">
-                    <img src="doc9.jpg">
-                    <h2>Dr. Sarah Khan</h2>
-                    <p>Experience: 10 Years</p>
-                    <p>Dermatologist</p>
-                </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="doctor.html" class="active">Doctors</a></li>
+        </ul>
+    </nav>
 
-                <div class="card-back">
-                    <h2>Dr. Sarah Khan</h2>
-                    <p>
-                        Dr. Sarah specializes in skin care,
-                        dermatology and advanced skin treatments.
-                    </p>
-                </div>
+    <!-- ========== PAGE HEADER ========== -->
+    <header class="page-header">
+        <span class="eyebrow">Meet the Team</span>
+        <h1 class="page-title">Our Specialist Doctors</h1>
+        <p class="page-subtitle">Board-certified specialists across cardiology, neurology, orthopedics, and more — dedicated to your care.</p>
+    </header>
+
+    <!-- ========== PAGE STATE ========== -->
+    <input type="radio" name="slide" id="page1" checked>
+    <input type="radio" name="slide" id="page2">
+
+    <!-- ========== SLIDER ========== -->
+    <div class="slider-wrapper">
+        <div class="slider">
+
+            <!-- ===== PAGE 1 ===== -->
+            <div class="doctor-page page-blue">
+
+                <article class="card">
+                    <input type="checkbox" id="doctor1">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="img-wrapper">
+                                <img src="https://ik.imagekit.io/ii1duviwf/assets/doc4.jpg?updatedAt=1786777857141" alt="Dr. John Smith">
+                            </div>
+                            <h2>Dr. John Smith</h2>
+                            <div class="badge-group">
+                                <span class="exp-badge">12 Years</span>
+                                <span class="specialty-badge">Cardiologist</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-icon">❤️</div>
+                            <h2>Dr. John Smith</h2>
+                            <span class="back-specialty">Cardiologist</span>
+                            <p>Expert cardiologist providing comprehensive heart care using modern technology.</p>
+                        </div>
+                    </div>
+                    <label for="doctor1" class="flip-btn">View Profile</label>
+                </article>
+
+                <article class="card">
+                    <input type="checkbox" id="doctor2">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="img-wrapper">
+                                <img src="https://ik.imagekit.io/ii1duviwf/assets/doc11.jpg?updatedAt=1786777857047" alt="Dr. Sarah Khan">
+                            </div>
+                            <h2>Dr. Sarah Khan</h2>
+                            <div class="badge-group">
+                                <span class="exp-badge">10 Years</span>
+                                <span class="specialty-badge">Dermatologist</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-icon">🧴</div>
+                            <h2>Dr. Sarah Khan</h2>
+                            <span class="back-specialty">Dermatologist</span>
+                            <p>Specialist in skin care, advanced dermatology, and cosmetic treatments.</p>
+                        </div>
+                    </div>
+                    <label for="doctor2" class="flip-btn">View Profile</label>
+                </article>
+
+                <article class="card">
+                    <input type="checkbox" id="doctor3">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="img-wrapper">
+                                <img src="https://ik.imagekit.io/ii1duviwf/assets/doc5.jpg?updatedAt=1786777857223" alt="Dr. Ahmed Ali">
+                            </div>
+                            <h2>Dr. Ahmed Ali</h2>
+                            <div class="badge-group">
+                                <span class="exp-badge">15 Years</span>
+                                <span class="specialty-badge">Neurologist</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-icon">🧠</div>
+                            <h2>Dr. Ahmed Ali</h2>
+                            <span class="back-specialty">Neurologist</span>
+                            <p>Neurological diagnosis and treatment for complex brain and nervous system disorders.</p>
+                        </div>
+                    </div>
+                    <label for="doctor3" class="flip-btn">View Profile</label>
+                </article>
+
+                <article class="card">
+                    <input type="checkbox" id="doctor4">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="img-wrapper">
+                                <img src="https://ik.imagekit.io/ii1duviwf/assets/doc8.jpg?updatedAt=1786777858055" alt="Dr. Emily Davis">
+                            </div>
+                            <h2>Dr. Emily Davis</h2>
+                            <div class="badge-group">
+                                <span class="exp-badge">8 Years</span>
+                                <span class="specialty-badge">Pediatrician</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-icon">👶</div>
+                            <h2>Dr. Emily Davis</h2>
+                            <span class="back-specialty">Pediatrician</span>
+                            <p>Dedicated to children's health, growth monitoring, and pediatric care.</p>
+                        </div>
+                    </div>
+                    <label for="doctor4" class="flip-btn">View Profile</label>
+                </article>
+
+                <article class="card">
+                    <input type="checkbox" id="doctor5">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="img-wrapper">
+                                <img src="https://ik.imagekit.io/ii1duviwf/assets/doc13.jpg?updatedAt=1786777857024" alt="Dr. Michael Lee">
+                            </div>
+                            <h2>Dr. Michael Lee</h2>
+                            <div class="badge-group">
+                                <span class="exp-badge">14 Years</span>
+                                <span class="specialty-badge">Orthopedic</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-icon">🦴</div>
+                            <h2>Dr. Michael Lee</h2>
+                            <span class="back-specialty">Orthopedic Surgeon</span>
+                            <p>Orthopedic surgeon specializing in bones, joints, and musculoskeletal injuries.</p>
+                        </div>
+                    </div>
+                    <label for="doctor5" class="flip-btn">View Profile</label>
+                </article>
+
+                <article class="card">
+                    <input type="checkbox" id="doctor6">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="img-wrapper">
+                                <img src="https://ik.imagekit.io/ii1duviwf/assets/doc6.jpg?updatedAt=1786777857351" alt="Dr. Maria Joseph">
+                            </div>
+                            <h2>Dr. Maria Joseph</h2>
+                            <div class="badge-group">
+                                <span class="exp-badge">11 Years</span>
+                                <span class="specialty-badge">Gynecologist</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-icon">🌸</div>
+                            <h2>Dr. Maria Joseph</h2>
+                            <span class="back-specialty">Gynecologist</span>
+                            <p>Women's health expert offering comprehensive gynecological and obstetric services.</p>
+                        </div>
+                    </div>
+                    <label for="doctor6" class="flip-btn">View Profile</label>
+                </article>
 
             </div>
-            <label for="doctor2" class="flip">Click to Flip</label>
-        </div>
 
-        <!-- Doctor 3 -->
-        <div class="card">
-            <input type="checkbox" id="doctor3">
-            <div class="card-inner">
+            <!-- ===== PAGE 2 ===== -->
+            <div class="doctor-page page-amber">
 
-                <div class="card-front">
-                    <img src="doc3.jpg">
-                    <h2>Dr. Ahmed Ali</h2>
-                    <p>Experience: 15 Years</p>
-                    <p>Neurologist</p>
-                </div>
+                <article class="card">
+                    <input type="checkbox" id="doctor7">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="img-wrapper">
+                                <img src="https://ik.imagekit.io/ii1duviwf/assets/doc4.jpg?updatedAt=1786777857141" alt="Dr. David Wilson">
+                            </div>
+                            <h2>Dr. David Wilson</h2>
+                            <div class="badge-group">
+                                <span class="exp-badge">13 Years</span>
+                                <span class="specialty-badge">Surgeon</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-icon">🔬</div>
+                            <h2>Dr. David Wilson</h2>
+                            <span class="back-specialty">Surgeon</span>
+                            <p>Highly skilled surgeon with expertise in minimally invasive and complex surgeries.</p>
+                        </div>
+                    </div>
+                    <label for="doctor7" class="flip-btn">View Profile</label>
+                </article>
 
-                <div class="card-back">
-                    <h2>Dr. Ahmed Ali</h2>
-                    <p>
-                        Dr. Ahmed provides specialized neurological
-                        diagnosis and treatment for patients.
-                    </p>
-                </div>
+                <article class="card">
+                    <input type="checkbox" id="doctor8">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="img-wrapper">
+                                <img src="https://ik.imagekit.io/ii1duviwf/assets/doc10.jpg?updatedAt=1786777857098" alt="Dr. Lisa Roy">
+                            </div>
+                            <h2>Dr. Lisa Roy</h2>
+                            <div class="badge-group">
+                                <span class="exp-badge">9 Years</span>
+                                <span class="specialty-badge">ENT Specialist</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-icon">👂</div>
+                            <h2>Dr. Lisa Roy</h2>
+                            <span class="back-specialty">ENT Specialist</span>
+                            <p>Ear, nose, and throat specialist treating a wide range of ENT conditions.</p>
+                        </div>
+                    </div>
+                    <label for="doctor8" class="flip-btn">View Profile</label>
+                </article>
+
+                <article class="card">
+                    <input type="checkbox" id="doctor9">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="img-wrapper">
+                                <img src="https://ik.imagekit.io/ii1duviwf/assets/doc2.jpg?updatedAt=1786777857091" alt="Dr. Robert Khan">
+                            </div>
+                            <h2>Dr. Robert Khan</h2>
+                            <div class="badge-group">
+                                <span class="exp-badge">16 Years</span>
+                                <span class="specialty-badge">General Physician</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-icon">🩺</div>
+                            <h2>Dr. Robert Khan</h2>
+                            <span class="back-specialty">General Physician</span>
+                            <p>Experienced general physician providing primary care and health consultations.</p>
+                        </div>
+                    </div>
+                    <label for="doctor9" class="flip-btn">View Profile</label>
+                </article>
+
+                <article class="card">
+                    <input type="checkbox" id="doctor10">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="img-wrapper">
+                                <img src="https://ik.imagekit.io/ii1duviwf/assets/doc12.jpg?updatedAt=1786777857067" alt="Dr. Anna Thomas">
+                            </div>
+                            <h2>Dr. Anna Thomas</h2>
+                            <div class="badge-group">
+                                <span class="exp-badge">7 Years</span>
+                                <span class="specialty-badge">Radiologist</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-icon">📷</div>
+                            <h2>Dr. Anna Thomas</h2>
+                            <span class="back-specialty">Radiologist</span>
+                            <p>Radiology specialist offering advanced diagnostic imaging and interpretation.</p>
+                        </div>
+                    </div>
+                    <label for="doctor10" class="flip-btn">View Profile</label>
+                </article>
+
+                <article class="card">
+                    <input type="checkbox" id="doctor11">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="img-wrapper">
+                                <img src="https://ik.imagekit.io/ii1duviwf/assets/doc3.jpg?updatedAt=1786777857188" alt="Dr. James Kumar">
+                            </div>
+                            <h2>Dr. James Kumar</h2>
+                            <div class="badge-group">
+                                <span class="exp-badge">12 Years</span>
+                                <span class="specialty-badge">Urologist</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-icon">🧬</div>
+                            <h2>Dr. James Kumar</h2>
+                            <span class="back-specialty">Urologist</span>
+                            <p>Urology expert providing diagnosis and treatment for urinary and male reproductive issues.</p>
+                        </div>
+                    </div>
+                    <label for="doctor11" class="flip-btn">View Profile</label>
+                </article>
+
+                <article class="card">
+                    <input type="checkbox" id="doctor12">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="img-wrapper">
+                                <img src="https://ik.imagekit.io/ii1duviwf/assets/doc5.jpg?updatedAt=1786777857223" alt="Dr. Sophia Khan">
+                            </div>
+                            <h2>Dr. Sophia Khan</h2>
+                            <div class="badge-group">
+                                <span class="exp-badge">10 Years</span>
+                                <span class="specialty-badge">Psychiatrist</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-icon">🧘</div>
+                            <h2>Dr. Sophia Khan</h2>
+                            <span class="back-specialty">Psychiatrist</span>
+                            <p>Compassionate psychiatrist offering mental wellness and therapy services.</p>
+                        </div>
+                    </div>
+                    <label for="doctor12" class="flip-btn">View Profile</label>
+                </article>
 
             </div>
-            <label for="doctor3" class="flip">Click to Flip</label>
+
         </div>
-
-        <!-- Doctor 4 -->
-        <div class="card">
-            <input type="checkbox" id="doctor4">
-            <div class="card-inner">
-
-                <div class="card-front">
-                    <img src="doc6.jpg">
-                    <h2>Dr. Emily Davis</h2>
-                    <p>Experience: 8 Years</p>
-                    <p>Pediatrician</p>
-                </div>
-
-                <div class="card-back">
-                    <h2>Dr. Emily Davis</h2>
-                    <p>
-                        Dr. Emily specializes in children's health,
-                        growth and medical care.
-                    </p>
-                </div>
-
-            </div>
-            <label for="doctor4" class="flip">Click to Flip</label>
-        </div>
-
-        <!-- Doctor 5 -->
-        <div class="card">
-            <input type="checkbox" id="doctor5">
-            <div class="card-inner">
-
-                <div class="card-front">
-                    <img src="doc7.jpg">
-                    <h2>Dr. Michael Lee</h2>
-                    <p>Experience: 14 Years</p>
-                    <p>Orthopedic</p>
-                </div>
-
-                <div class="card-back">
-                    <h2>Dr. Michael Lee</h2>
-                    <p>
-                        Dr. Michael specializes in bones,
-                        joints, muscles and orthopedic treatment.
-                    </p>
-                </div>
-
-            </div>
-            <label for="doctor5" class="flip">Click to Flip</label>
-        </div>
-
-        <!-- Doctor 6 -->
-        <div class="card">
-            <input type="checkbox" id="doctor6">
-            <div class="card-inner">
-
-                <div class="card-front">
-                    <img src="doc13.jpg">
-                    <h2>Dr. Maria Joseph</h2>
-                    <p>Experience: 11 Years</p>
-                    <p>Gynecologist</p>
-                </div>
-
-                <div class="card-back">
-                    <h2>Dr. Maria Joseph</h2>
-                    <p>
-                        Dr. Maria provides professional women's
-                        healthcare and gynecological services.
-                    </p>
-                </div>
-
-            </div>
-            <label for="doctor6" class="flip">Click to Flip</label>
-        </div>
-
     </div>
 
-
-    <!-- PAGE 2 : NEW 6 DOCTORS -->
-    <div class="doctor-page">
-
-        <div class="card">
-            <input type="checkbox" id="doctor7">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="doc4.jpg">
-                    <h2>Dr. David Wilson</h2>
-                    <p>Experience: 13 Years</p>
-                    <p>Surgeon</p>
-                </div>
-                <div class="card-back">
-                    <h2>Dr. David Wilson</h2>
-                    <p>
-                        Dr. David is an experienced surgeon
-                        providing safe and advanced surgical care.
-                    </p>
-                </div>
-            </div>
-            <label for="doctor7" class="flip">Click to Flip</label>
+    <!-- ========== SLIDE CONTROLS ========== -->
+    <div class="slide-controls">
+        <label for="page1" class="slide-btn">← Previous</label>
+        <div class="slide-dots">
+            <label for="page1" class="dot" aria-label="Page 1"></label>
+            <label for="page2" class="dot" aria-label="Page 2"></label>
         </div>
-
-        <div class="card">
-            <input type="checkbox" id="doctor8">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="doc8.jpg">
-                    <h2>Dr. Lisa Roy</h2>
-                    <p>Experience: 9 Years</p>
-                    <p>ENT Specialist</p>
-                </div>
-                <div class="card-back">
-                    <h2>Dr. Lisa Roy</h2>
-                    <p>
-                        Dr. Lisa provides treatment for ear,
-                        nose and throat related conditions.
-                    </p>
-                </div>
-            </div>
-            <label for="doctor8" class="flip">Click to Flip</label>
-        </div>
-
-        <div class="card">
-            <input type="checkbox" id="doctor9">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="doc5.jpg">
-                    <h2>Dr. Robert Khan</h2>
-                    <p>Experience: 16 Years</p>
-                    <p>General Physician</p>
-                </div>
-                <div class="card-back">
-                    <h2>Dr. Robert Khan</h2>
-                    <p>
-                        Dr. Robert provides complete general
-                        medical consultation and patient care.
-                    </p>
-                </div>
-            </div>
-            <label for="doctor9" class="flip">Click to Flip</label>
-        </div>
-
-        <div class="card">
-            <input type="checkbox" id="doctor10">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="doc10.jpg">
-                    <h2>Dr. Anna Thomas</h2>
-                    <p>Experience: 7 Years</p>
-                    <p>Radiologist</p>
-                </div>
-                <div class="card-back">
-                    <h2>Dr. Anna Thomas</h2>
-                    <p>
-                        Dr. Anna specializes in medical imaging
-                        and diagnostic radiology.
-                    </p>
-                </div>
-            </div>
-            <label for="doctor10" class="flip">Click to Flip</label>
-        </div>
-
-        <div class="card">
-            <input type="checkbox" id="doctor11">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="doc12.jpg">
-                    <h2>Dr. James Kumar</h2>
-                    <p>Experience: 12 Years</p>
-                    <p>Urologist</p>
-                </div>
-                <div class="card-back">
-                    <h2>Dr. James Kumar</h2>
-                    <p>
-                        Dr. James provides specialized diagnosis
-                        and treatment for urinary conditions.
-                    </p>
-                </div>
-            </div>
-            <label for="doctor11" class="flip">Click to Flip</label>
-        </div>
-
-        <div class="card">
-            <input type="checkbox" id="doctor12">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="doc11.jpg">
-                    <h2>Dr. Sophia Khan</h2>
-                    <p>Experience: 10 Years</p>
-                    <p>Psychiatrist</p>
-                </div>
-                <div class="card-back">
-                    <h2>Dr. Sophia Khan</h2>
-                    <p>
-                        Dr. Sophia provides professional mental
-                        wellness consultation and patient support.
-                    </p>
-                </div>
-            </div>
-            <label for="doctor12" class="flip">Click to Flip</label>
-        </div>
-
+        <label for="page2" class="slide-btn">Next →</label>
     </div>
 
-</div>
-
-
-<!-- SLIDE BUTTONS -->
-<div class="buttons">
-    <label for="page1">❮ Previous</label>
-    <label for="page2">Next ❯</label>
-</div>
-
-</body>
-</html>
-
+    <script src="script.js"></script>
 </body>
 </html>

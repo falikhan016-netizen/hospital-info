@@ -1,27 +1,149 @@
-*{
+/* ==========================================
+   RESET & BASE
+   ========================================== */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    background-color: #f0f4f8;
+    background:
+        radial-gradient(circle at 10% 0%, #e3f0fa 0%, transparent 45%),
+        radial-gradient(circle at 90% 30%, #e6f8fb 0%, transparent 40%),
+        #f0f4f8;
     color: #2d3748;
     line-height: 1.5;
+    padding: 0 20px;
 }
 
-/* ----------------------------------
-   Sticky Navigation Header Area
-------------------------------------- */
-.site-header {
-    background-color: #032232;
-    color: #ffffff;
-    padding: 15px 20px;
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ==========================================
+   NAVBAR
+   ========================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    color: #fff;
     position: sticky;
     top: 0;
-    z-index: 50;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    background: linear-gradient(120deg, #16222f 0%, #1e2a38 60%, #24374a 100%);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(126, 232, 250, 0.15);
+    margin: 0 -20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.owaisilo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #7ee8fa;
+    box-shadow: 0 0 0 4px rgba(126, 232, 250, 0.15), 0 0 18px rgba(126, 232, 250, 0.45);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.logo:hover .owaisilo {
+    transform: rotate(8deg) scale(1.05);
+    box-shadow: 0 0 0 5px rgba(126, 232, 250, 0.25), 0 0 26px rgba(126, 232, 250, 0.7);
+}
+
+.navlogo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #ffffff 30%, #7ee8fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #e8f4fb;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    position: relative;
+    padding: 6px 0;
+    transition: color 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #7ee8fa, #14b8c4);
+    border-radius: 2px;
+    transition: width 0.35s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #7ee8fa;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Hamburger */
+.menu-checkbox { display: none; }
+
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.35s ease;
+}
+
+/* ==========================================
+   SITE HEADER (Search bar area)
+   ========================================== */
+.site-header {
+    background: linear-gradient(135deg, #032232 0%, #0a3b5a 100%);
+    color: #ffffff;
+    padding: 22px 25px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    border-radius: 0 0 16px 16px;
+    margin: 0 -20px;
+    border-bottom: 2px solid rgba(126, 232, 250, 0.25);
 }
 
 .header-content {
@@ -31,138 +153,342 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
 }
 
 .header-content h1 {
-    font-size: 22px;
-    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+    letter-spacing: 0.6px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ffffff 40%, #7ee8fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* No-JS Native Search Bar Box */
 .search-box {
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
 }
 
 .search-field {
     width: 100%;
-    padding: 8px 16px;
-    border: 2px solid transparent;
-    border-radius: 4px;
+    padding: 11px 20px;
+    border: 2px solid rgba(126, 232, 250, 0.25);
+    border-radius: 50px;
     font-size: 14px;
     outline: none;
-    background-color: #ffffff;
-    color: #333333;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-field::placeholder {
+    color: #7a8c9b;
 }
 
 .search-field:focus {
-    border-color: #328cc1;
+    border-color: #7ee8fa;
+    box-shadow: 0 0 0 4px rgba(126, 232, 250, 0.2);
 }
 
-.search-tip {
-    background-color: #fff3cd;
-    border-left: 4px solid #ffc107;
-    color: #664d03;
-    padding: 12px;
-    border-radius: 4px;
-    margin-bottom: 25px;
-    font-size: 13px;
-}
-
+/* ==========================================
+   HERO / INTRO TEXT
+   ========================================== */
 .hero-section {
     text-align: center;
-    margin-bottom: 30px;
+    margin: 40px auto 38px;
+    max-width: 780px;
+    padding: 0 15px;
 }
 
 .hero-section h2 {
     color: #0b3c5d;
-    font-size: 26px;
-    margin-bottom: 8px;
+    font-size: 1.9rem;
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+    letter-spacing: 0.4px;
+}
+
+.hero-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 90px;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #7ee8fa, #14b8c4);
+    box-shadow: 0 0 14px rgba(20, 184, 196, 0.5);
 }
 
 .hero-section p {
-    color: #718096;
-    font-size: 15px;
+    color: #63788c;
+    font-size: 1rem;
 }
 
-/* ----------------------------------
-   Responsive CSS Grid System
-------------------------------------- */
+/* ==========================================
+   SERVICES GRID
+   ========================================== */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto 50px;
 }
 
-/* ----------------------------------
-   Individual Organ Information Cards
-------------------------------------- */
+/* ==========================================
+   ORGAN CARDS
+   ========================================== */
 .organ-card {
-    background-color: #ffffff;
-    border-radius: 6px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border-top: 4px solid #328cc1;
+    background: linear-gradient(160deg, #ffffff 0%, #f7fbfd 100%);
+    border-radius: 18px;
+    padding: 26px;
+    box-shadow: 0 10px 30px rgba(15, 40, 70, 0.09);
+    border: 1px solid rgba(126, 232, 250, 0.25);
+    border-top: 5px solid #328cc1;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.3),
+                box-shadow 0.4s ease,
+                border-color 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.organ-card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(126, 232, 250, 0.18), transparent 70%);
+    pointer-events: none;
+    transition: transform 0.5s ease;
+}
+
+.organ-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(15, 40, 70, 0.18);
+    border-top-color: #14b8c4;
+}
+
+.organ-card:hover::before {
+    transform: scale(1.4);
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
-    border-bottom: 1px solid #edf2f7;
-    padding-bottom: 8px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #e3eef5;
+    padding-bottom: 10px;
+    gap: 10px;
 }
 
 .card-header h3 {
-    font-size: 18px;
+    font-size: 1.15rem;
     color: #0b3c5d;
+    letter-spacing: 0.2px;
 }
 
 .price-tag {
-    background-color: #d4edda;
-    color: #155724;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 4px 10px;
-    border-radius: 20px;
+    background: linear-gradient(135deg, #d4edda, #b9e6c5);
+    color: #0f5132;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 5px 14px;
+    border-radius: 40px;
+    white-space: nowrap;
+    box-shadow: 0 3px 10px rgba(21, 87, 36, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.organ-card:hover .price-tag {
+    transform: scale(1.06);
 }
 
 .description {
-    font-size: 13px;
-    color: #4a5568;
-    margin-bottom: 15px;
+    font-size: 0.88rem;
+    color: #54687c;
+    margin-bottom: 16px;
+    line-height: 1.6;
 }
 
-/* Inside Laboratory Component Lists */
 .test-breakdown {
     list-style: none;
+    padding: 0;
 }
 
 .test-breakdown li {
-    font-size: 13px;
-    padding: 6px 0;
-    border-bottom: 1px dashed #e2e8f0;
+    font-size: 0.85rem;
+    padding: 8px 0 8px 16px;
+    border-bottom: 1px dashed #e1ebf2;
     color: #2d3748;
+    position: relative;
+    line-height: 1.55;
+    transition: color 0.25s ease;
+}
+
+.test-breakdown li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #14b8c4;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.25s ease;
 }
 
 .test-breakdown li:last-child {
     border-bottom: none;
+    padding-bottom: 0;
+}
+
+.test-breakdown li:hover {
+    color: #0b3c5d;
+}
+
+.test-breakdown li:hover::before {
+    color: #0b3c5d;
 }
 
 .test-breakdown strong {
-    color: #328cc1;
+    color: #0b6e99;
+    font-weight: 600;
 }
 
-/* ----------------------------------
-   Footer Layout Settings
-------------------------------------- */
+/* ==========================================
+   FOOTER
+   ========================================== */
 .site-footer {
-    background-color: #1d2731;
-    color: #a0aec0;
+    background: linear-gradient(160deg, #0d1b2a 0%, #091420 100%);
+    color: #a9bccb;
     text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-    font-size: 12px;
+    padding: 22px 20px;
+    margin: 50px -20px 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+    border-top: 3px solid rgba(126, 232, 250, 0.35);
+    position: relative;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #7ee8fa, transparent);
+    opacity: 0.6;
+}
+
+.site-footer p {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   SCROLLBAR
+   ========================================== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e2eef5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #14b8c4, #1e2a38);
+    border-radius: 10px;
+    border: 2px solid #e2eef5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #7ee8fa, #14b8c4);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 1024px) {
+    .header-content h1 { font-size: 1.3rem; }
+}
+
+@media (max-width: 768px) {
+    body { padding: 0 14px; }
+
+    .navbar {
+        padding: 12px 20px;
+        margin: 0 -14px;
+    }
+
+    .menu-btn { display: flex; }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: linear-gradient(160deg, #16222f, #24374a);
+        text-align: center;
+        padding: 22px 0;
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+        gap: 0;
+        border-top: 1px solid rgba(126, 232, 250, 0.2);
+    }
+
+    .nav-links li { margin: 12px 0; }
+
+    .menu-checkbox:checked ~ .nav-links { display: flex; }
+    .menu-checkbox:checked ~ .menu-btn span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .menu-checkbox:checked ~ .menu-btn span:nth-child(2) { opacity: 0; }
+    .menu-checkbox:checked ~ .menu-btn span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+    .site-header {
+        padding: 18px;
+        margin: 0 -14px;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .header-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-content h1 { font-size: 1.2rem; }
+
+    .search-box { max-width: 100%; }
+
+    .hero-section { margin: 30px auto 28px; }
+    .hero-section h2 { font-size: 1.45rem; }
+    .hero-section p { font-size: 0.92rem; }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .organ-card { padding: 22px; }
+
+    .site-footer { margin: 40px -14px 0; }
+}
+
+@media (max-width: 480px) {
+    .navlogo { font-size: 1.15rem; }
+    .owaisilo { width: 45px; height: 45px; }
+    .header-content h1 { font-size: 1.05rem; }
+    .card-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .price-tag { align-self: flex-start; }
+    .hero-section h2 { font-size: 1.25rem; }
+    .organ-card { padding: 18px; }
 }

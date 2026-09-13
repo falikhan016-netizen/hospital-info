@@ -3,12 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>0WAISI Hospital Diagnostic Centre</title>
-    <!-- Linking the external CSS file -->
+    <title>Diagnostic Services – Owaisi Hospital</title>
     <link rel="stylesheet" href="services.css">
 </head>
 <body>
 
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://ik.imagekit.io/ii1duviwf/assets/images3.jpg?updatedAt=1786777859644" alt="Owaisi Hospital Logo" class="owaisilo">
+            <p class="navlogo"><i>Owaisi Hospital</i></p>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="doctor.html">Doctors</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== HEADER WITH SEARCH ========== -->
     <header class="site-header">
         <div class="header-content">
             <h1>OWAISI Hospital Diagnostic Centre</h1>
@@ -20,103 +42,133 @@
         </div>
     </header>
 
-        <section class="hero-section">
-            <h2>Organ-Specific Diagnostic Testing</h2>
-            <p>Select a specialized pathology module below to view exact test inclusions and baseline clinic pricing parameters.</p>
-        </section>
+    <!-- ========== HERO ========== -->
+    <section class="hero-section">
+        <h2>Organ-Specific Diagnostic Testing</h2>
+        <p>Select a specialized pathology module below to view exact test inclusions and baseline clinic pricing parameters.</p>
+    </section>
 
-        <main class="services-grid">
-            
-            <!-- Lungs Section -->
-            <article class="organ-card">
-                <div class="card-header">
-                    <h3>🩺 Pulmonary & Lungs</h3>
-                    <span class="price-tag">₹1,499</span>
-                </div>
-                <p class="description">Evaluates respiratory system volumes, airway obstructions, lung field clarity, and gas exchange efficiencies.</p>
-                <ul class="test-breakdown">
-                    <li><strong>Chest X-Ray (PA View):</strong> Detects fluid accumulation, infections, or enlargement.</li>
-                    <li><strong>Spirometry / PFT:</strong> Assesses total air inhalation and exhalation lung capacity.</li>
-                    <li><strong>HRCT Thorax Preview:</strong> Advanced screening for chronic obstructive pulmonary issues.</li>
-                </ul>
-            </article>
+    <!-- ========== SERVICES GRID ========== -->
+    <main class="services-grid">
 
-            <!-- Heart Section -->
-            <article class="organ-card">
-                <div class="card-header">
-                    <h3>❤️ Cardiology & Heart</h3>
-                    <span class="price-tag">₹2,499</span>
-                </div>
-                <p class="description">Analyzes electrical path mapping, mechanical valve functions, arterial structural stress, and lipid counts.</p>
-                <ul class="test-breakdown">
-                    <li><strong>12-Lead Electrocardiogram (ECG):</strong> Captures immediate cardiovascular rhythmic stability.</li>
-                    <li><strong>2D Echocardiography:</strong> Ultrasound visual mapping of functional ejection fraction rate.</li>
-                    <li><strong>Extended Lipid Profile:</strong> Measures breakdown of HDL, LDL, and total cholesterol.</li>
-                </ul>
-            </article>
+        <!-- Lungs -->
+        <article class="organ-card">
+            <div class="card-header">
+                <h3>🩺 Pulmonary &amp; Lungs</h3>
+                <span class="price-tag">₹1,499</span>
+            </div>
+            <p class="description">Evaluates respiratory system volumes, airway obstructions, lung field clarity, and gas exchange efficiencies.</p>
+            <ul class="test-breakdown">
+                <li><strong>Chest X-Ray (PA View):</strong> Detects fluid accumulation, infections, or enlargement.</li>
+                <li><strong>Spirometry / PFT:</strong> Assesses total air inhalation and exhalation lung capacity.</li>
+                <li><strong>HRCT Thorax Preview:</strong> Advanced screening for chronic obstructive pulmonary issues.</li>
+            </ul>
+        </article>
 
-            <!-- Kidney Section -->
-            <article class="organ-card">
-                <div class="card-header">
-                    <h3>🧼 Renal & Kidney</h3>
-                    <span class="price-tag">₹1,199</span>
-                </div>
-                <p class="description">Monitors organic cellular filtration rates, toxin clearance speeds, and blood electrolyte balances.</p>
-                <ul class="test-breakdown">
-                    <li><strong>Serum Creatinine & Urea:</strong> Direct metabolic waste clearance performance metrics.</li>
-                    <li><strong>Uric Acid Levels:</strong> Evaluates processing of complex purine crystalline byproducts.</li>
-                    <li><strong>Routine Urinalysis:</strong> Screens for leakage patterns of microalbumin or protein cells.</li>
-                </ul>
-            </article>
+        <!-- Heart -->
+        <article class="organ-card">
+            <div class="card-header">
+                <h3>❤️ Cardiology &amp; Heart</h3>
+                <span class="price-tag">₹2,499</span>
+            </div>
+            <p class="description">Analyzes electrical path mapping, mechanical valve functions, arterial structural stress, and lipid counts.</p>
+            <ul class="test-breakdown">
+                <li><strong>12-Lead Electrocardiogram (ECG):</strong> Captures immediate cardiovascular rhythmic stability.</li>
+                <li><strong>2D Echocardiography:</strong> Ultrasound visual mapping of functional ejection fraction rate.</li>
+                <li><strong>Extended Lipid Profile:</strong> Measures breakdown of HDL, LDL, and total cholesterol.</li>
+            </ul>
+        </article>
 
-            <!-- Liver Section -->
-            <article class="organ-card">
-                <div class="card-header">
-                    <h3>🧪 Hepatic & Liver</h3>
-                    <span class="price-tag">₹1,299</span>
-                </div>
-                <p class="description">Measures enzyme health, structural cellular damage, toxic breakdown limits, and vital protein manufacturing.</p>
-                <ul class="test-breakdown">
-                    <li><strong>SGOT & SGPT Bilirubin:</strong> Screens for active cellular inflammation or liver damage.</li>
-                    <li><strong>Alkaline Phosphatase (ALP):</strong> Checks structural bile duct passage flow rates.</li>
-                    <li><strong>Albumin / Globulin Ratio:</strong> Measures fluid balance and internal protein levels.</li>
-                </ul>
-            </article>
+        <!-- Kidney -->
+        <article class="organ-card">
+            <div class="card-header">
+                <h3>🧼 Renal &amp; Kidney</h3>
+                <span class="price-tag">₹1,199</span>
+            </div>
+            <p class="description">Monitors organic cellular filtration rates, toxin clearance speeds, and blood electrolyte balances.</p>
+            <ul class="test-breakdown">
+                <li><strong>Serum Creatinine &amp; Urea:</strong> Direct metabolic waste clearance performance metrics.</li>
+                <li><strong>Uric Acid Levels:</strong> Evaluates processing of complex purine crystalline byproducts.</li>
+                <li><strong>Routine Urinalysis:</strong> Screens for leakage patterns of microalbumin or protein cells.</li>
+            </ul>
+        </article>
 
-            <!-- Metabolic / Endocrine Section -->
-            <article class="organ-card">
-                <div class="card-header">
-                    <h3>🩸 Diabetes & Thyroid</h3>
-                    <span class="price-tag">₹999</span>
-                </div>
-                <p class="description">Tracks core metabolic health, hormonal balances, and long-term glucose stabilization curves.</p>
-                <ul class="test-breakdown">
-                    <li><strong>HbA1c Glycated Hemoglobin:</strong> Evaluates three-month average tracking of glucose.</li>
-                    <li><strong>Thyroid Profile (T3, T4, TSH):</strong> Regulates metabolic system processing speed.</li>
-                    <li><strong>Fasting Blood Sugar (FBS):</strong> Immediate baseline index for blood glucose.</li>
-                </ul>
-            </article>
+        <!-- Liver -->
+        <article class="organ-card">
+            <div class="card-header">
+                <h3>🧪 Hepatic &amp; Liver</h3>
+                <span class="price-tag">₹1,299</span>
+            </div>
+            <p class="description">Measures enzyme health, structural cellular damage, toxic breakdown limits, and vital protein manufacturing.</p>
+            <ul class="test-breakdown">
+                <li><strong>SGOT &amp; SGPT Bilirubin:</strong> Screens for active cellular inflammation or liver damage.</li>
+                <li><strong>Alkaline Phosphatase (ALP):</strong> Checks structural bile duct passage flow rates.</li>
+                <li><strong>Albumin / Globulin Ratio:</strong> Measures fluid balance and internal protein levels.</li>
+            </ul>
+        </article>
 
-            <!-- Bones & Joints Section -->
-            <article class="organ-card">
-                <div class="card-header">
-                    <h3>🦴 Orthopedic & Bone</h3>
-                    <span class="price-tag">₹1,799</span>
-                </div>
-                <p class="description">Assesses critical architectural structural density parameters, mineral stocks, and joint wear biomarkers.</p>
-                <ul class="test-breakdown">
-                    <li><strong>Vitamin D3 (25-Hydroxy):</strong> Essential element marker for calcium absorption stability.</li>
-                    <li><strong>Serum Calcium & Phosphorus:</strong> Raw material assessment for mineralized skeletal mass.</li>
-                    <li><strong>Rheumatoid Factor (RF):</strong> Primary immune indicator for complex joint inflammation.</li>
-                </ul>
-            </article>
+        <!-- Diabetes & Thyroid -->
+        <article class="organ-card">
+            <div class="card-header">
+                <h3>🩸 Diabetes &amp; Thyroid</h3>
+                <span class="price-tag">₹999</span>
+            </div>
+            <p class="description">Tracks core metabolic health, hormonal balances, and long-term glucose stabilization curves.</p>
+            <ul class="test-breakdown">
+                <li><strong>HbA1c Glycated Hemoglobin:</strong> Evaluates three-month average tracking of glucose.</li>
+                <li><strong>Thyroid Profile (T3, T4, TSH):</strong> Regulates metabolic system processing speed.</li>
+                <li><strong>Fasting Blood Sugar (FBS):</strong> Immediate baseline index for blood glucose.</li>
+            </ul>
+        </article>
 
-        </main>
-    </div>
+        <!-- Bones & Joints -->
+        <article class="organ-card">
+            <div class="card-header">
+                <h3>🦴 Orthopedic &amp; Bone</h3>
+                <span class="price-tag">₹1,799</span>
+            </div>
+            <p class="description">Assesses critical architectural structural density parameters, mineral stocks, and joint wear biomarkers.</p>
+            <ul class="test-breakdown">
+                <li><strong>Vitamin D3 (25-Hydroxy):</strong> Essential element marker for calcium absorption stability.</li>
+                <li><strong>Serum Calcium &amp; Phosphorus:</strong> Raw material assessment for mineralized skeletal mass.</li>
+                <li><strong>Rheumatoid Factor (RF):</strong> Primary immune indicator for complex joint inflammation.</li>
+            </ul>
+        </article>
 
+        <!-- Neurology -->
+        <article class="organ-card">
+            <div class="card-header">
+                <h3>🧠 Neurology &amp; Brain</h3>
+                <span class="price-tag">₹2,999</span>
+            </div>
+            <p class="description">Evaluates electrical brain activity, structural integrity, and nerve conduction for comprehensive neurological assessment.</p>
+            <ul class="test-breakdown">
+                <li><strong>MRI Brain (Plain):</strong> High-resolution imaging for tumors, stroke, or structural anomalies.</li>
+                <li><strong>EEG (Electroencephalogram):</strong> Measures brain wave patterns to detect epilepsy or sleep disorders.</li>
+                <li><strong>Nerve Conduction Velocity (NCV):</strong> Assesses peripheral nerve damage and muscle response times.</li>
+            </ul>
+        </article>
+
+        <!-- Gastrointestinal -->
+        <article class="organ-card">
+            <div class="card-header">
+                <h3>🍽️ Gastrointestinal &amp; Digestive</h3>
+                <span class="price-tag">₹1,899</span>
+            </div>
+            <p class="description">Comprehensive evaluation of digestive tract function, enzyme levels, and gut microbiome health.</p>
+            <ul class="test-breakdown">
+                <li><strong>Upper GI Endoscopy:</strong> Visual inspection of esophagus, stomach, and duodenum.</li>
+                <li><strong>H. pylori Antigen Test:</strong> Detects bacterial infection causing ulcers and gastritis.</li>
+                <li><strong>Liver Function Test (LFT) Extended:</strong> Includes GGT and total protein for deeper hepatic insight.</li>
+            </ul>
+        </article>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
     <footer class="site-footer">
-        <p>&copy; 2026 owaisi hospital Diagnostic Centre. Prices are all-inclusive of disposable laboratory kit collection fees.</p>
+        <p>&copy; 2026 Owaisi Hospital Diagnostic Centre. Prices are all-inclusive of disposable laboratory kit collection fees.</p>
     </footer>
-
+        <script src="script.js"></script>
 </body>
 </html>
